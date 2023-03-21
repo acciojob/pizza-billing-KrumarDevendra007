@@ -76,7 +76,7 @@ public class Pizza {
             }
 
             if(isToppingAdded == true){
-                bill = bill + "Extra Toppings Added: " + totalPrice + "\n";
+                bill = bill + "Extra Toppings Added: " + toppingPrice + "\n";
             }
             if(isPaperBagAdded == true){
                 bill = bill + "Paper bag Price = " + paperBegPrice + "\n";
