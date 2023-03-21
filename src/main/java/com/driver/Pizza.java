@@ -2,32 +2,27 @@ package com.driver;
 
 public class Pizza {
 
-    private  int basePrice;
-    private int price;
-    private Boolean isVeg;
-    private String bill;
-    private int toppingPrice;
-    private  int cheesePrice;
-    private int bagPrice;
-    private int totalPrice;
-    private boolean isCheeseAdded;
-    private boolean isToppingAdded;
-    private boolean isPaperBagAdded;
-    private boolean isBillGenrated;
-
-
+    public int price;
+    public Boolean isVeg;
+    public String bill;
+    public int cheesePrice;
+    public int basePrice;
+    public int bagPrice;
+    public int toppingsPrice;
+    public int totalPrice;
+    boolean isCheeseAdded;
+    boolean isToppingAdded;
+    boolean isPaperBagAdded;
+    boolean isBillGenerated;
     public Pizza(Boolean isVeg){
-
-        // your code goes here
+        //Constructor is used to initialize the attribute of any class
         if(isVeg){
             basePrice = 300;
-            toppingPrice = 70;
-        }
-        else{
+            toppingsPrice = 70;
+        }else{
             basePrice = 400;
-            toppingPrice = 120;
+            toppingsPrice = 120;
         }
-
         cheesePrice = 80;
         bagPrice = 20;
 
@@ -35,11 +30,12 @@ public class Pizza {
         isToppingAdded = false;
         isPaperBagAdded = false;
         totalPrice = basePrice;
-
         bill = "Base Price Of The Pizza: "+ basePrice + "\n";
+
     }
 
-    public int getPrice(){
+    public int getPrice()
+    {
         return totalPrice;
     }
 
@@ -54,7 +50,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if(isToppingAdded == false){
-            this.totalPrice = totalPrice + toppingPrice;
+            this.totalPrice = totalPrice + toppingsPrice;
             isToppingAdded = true;
         }
     }
@@ -66,24 +62,24 @@ public class Pizza {
             isPaperBagAdded = true;
         }
     }
+
     public String getBill(){
         // your code goes here
-        if(isBillGenrated == false){
+        if(isBillGenerated == false){
 
-            if(isCheeseAdded == true){
-                bill = bill + "Extra Cheese Added: " + cheesePrice + "\n";
+            if(isCheeseAdded==true){
+                bill = bill + "Extra Cheese Added: "+ cheesePrice+"\n";
+            }
+            if(isToppingAdded==true){
+                bill = bill + "Extra Toppings Added: "+ toppingsPrice+"\n";
+            }
+            if(isPaperBagAdded==true){
+                bill = bill + "Paperbag Added: "+ bagPrice+"\n";
             }
 
-            if(isToppingAdded == true){
-                bill = bill + "Extra Toppings Added: " + toppingPrice + "\n";
-            }
-            if(isPaperBagAdded == true){
-                bill = bill + "Paper bag Price: " + bagPrice + "\n";
-            }
+            bill = bill + "Total Price: "+ totalPrice+"\n";
 
-            bill = bill + "Total Price: " + totalPrice + "\n";
-
-            isBillGenrated = true;
+            isBillGenerated = true;
         }
         return bill;
     }
