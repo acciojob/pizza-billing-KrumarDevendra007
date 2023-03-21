@@ -46,7 +46,7 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         if(isCheeseAdded == false){
-            totalPrice = totalPrice + cheesePrice;
+            this.totalPrice = totalPrice + cheesePrice;
             isCheeseAdded = true;
         }
     }
@@ -54,7 +54,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if(isToppingAdded == false){
-            totalPrice = totalPrice + toppingPrice;
+            this.totalPrice = totalPrice + toppingPrice;
             isToppingAdded = true;
         }
     }
@@ -62,7 +62,7 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
         if(isPaperBagAdded == false){
-            totalPrice = totalPrice + bagPrice;
+            this.totalPrice = totalPrice + bagPrice;
             isPaperBagAdded = true;
         }
     }
