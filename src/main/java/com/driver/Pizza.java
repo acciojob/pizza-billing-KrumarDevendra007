@@ -8,7 +8,7 @@ public class Pizza {
     private String bill;
     private int toppingPrice;
     private  int cheesePrice;
-    private int paperBegPrice;
+    private int bagPrice;
     private int totalPrice;
     private boolean isCheeseAdded;
     private boolean isToppingAdded;
@@ -29,7 +29,7 @@ public class Pizza {
         }
 
         cheesePrice = 80;
-        paperBegPrice = 20;
+        bagPrice = 20;
 
         totalPrice = basePrice;
 
@@ -63,7 +63,7 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
         if(isPaperBagAdded == false){
-            totalPrice = totalPrice + paperBegPrice;
+            totalPrice = totalPrice + bagPrice;
             isPaperBagAdded = true;
         }
     }
@@ -79,7 +79,7 @@ public class Pizza {
                 bill = bill + "Extra Toppings Added: " + toppingPrice + "\n";
             }
             if(isPaperBagAdded == true){
-                bill = bill + "Paper bag Price = " + paperBegPrice + "\n";
+                bill = bill + "Paper bag Price = " + bagPrice + "\n";
             }
 
             bill = bill + "Total Price: " + totalPrice + "\n";
