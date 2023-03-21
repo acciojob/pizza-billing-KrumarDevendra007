@@ -31,11 +31,10 @@ public class Pizza {
         cheesePrice = 80;
         bagPrice = 20;
 
-        totalPrice = basePrice;
-
         isCheeseAdded = false;
         isToppingAdded = false;
         isPaperBagAdded = false;
+        totalPrice = basePrice;
 
         bill = "Base Price Of The Pizza: "+ basePrice + "\n";
     }
@@ -79,7 +78,7 @@ public class Pizza {
                 bill = bill + "Extra Toppings Added: " + toppingPrice + "\n";
             }
             if(isPaperBagAdded == true){
-                bill = bill + "Paper bag Price = " + bagPrice + "\n";
+                bill = bill + "Paper bag Price: " + bagPrice + "\n";
             }
 
             bill = bill + "Total Price: " + totalPrice + "\n";
